@@ -1,0 +1,159 @@
+Microsoft Windows [Version 10.0.19045.3693]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Manish\Pictures\mysql>docker images
+REPOSITORY   TAG       IMAGE ID       CREATED             SIZE
+sql          latest    f6441be8ad19   About an hour ago   596MB
+db_mysql     latest    a0cea57d8efb   About an hour ago   596MB
+db_sql       latest    e1d2be688cbc   About an hour ago   596MB
+mysql        latest    3e70fd04e59d   About an hour ago   596MB
+<none>       <none>    f2f9e4401efc   About an hour ago   596MB
+mysql_db     latest    5d697aa80ee5   About an hour ago   596MB
+
+C:\Users\Manish\Pictures\mysql>docker run sql
+2023-12-02 07:42:53+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.2.0-1.el8 started.
+2023-12-02 07:42:54+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2023-12-02 07:42:54+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.2.0-1.el8 started.
+2023-12-02 07:42:54+00:00 [Note] [Entrypoint]: Initializing database files
+2023-12-02T07:42:54.273127Z 0 [System] [MY-015017] [Server] MySQL Server Initialization - start.
+2023-12-02T07:42:54.275970Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2023-12-02T07:42:54.276265Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.2.0) initializing of server in progress as process 81
+2023-12-02T07:42:54.343739Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2023-12-02T07:43:07.439379Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2023-12-02T07:43:41.736260Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2023-12-02T07:45:00.052229Z 0 [System] [MY-015018] [Server] MySQL Server Initialization - end.
+2023-12-02 07:45:00+00:00 [Note] [Entrypoint]: Database files initialized
+2023-12-02 07:45:00+00:00 [Note] [Entrypoint]: Starting temporary server
+2023-12-02T07:45:00.152475Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2023-12-02T07:45:01.336829Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2023-12-02T07:45:01.361798Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.2.0) starting as process 125
+2023-12-02T07:45:01.495149Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2023-12-02T07:45:04.370675Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2023-12-02T07:45:07.851931Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2023-12-02T07:45:07.851985Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2023-12-02T07:45:07.900142Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2023-12-02T07:45:07.918637Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+2023-12-02T07:45:07.918919Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.2.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+2023-12-02T07:45:07.921072Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2023-12-02 07:45:07+00:00 [Note] [Entrypoint]: Temporary server started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+2023-12-02 07:45:16+00:00 [Note] [Entrypoint]: Creating database student
+
+2023-12-02 07:45:17+00:00 [Note] [Entrypoint]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/databse_students.sql
+
+
+2023-12-02 07:45:19+00:00 [Note] [Entrypoint]: Stopping temporary server
+2023-12-02T07:45:19.533256Z 12 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.2.0).
+2023-12-02T07:45:42.428290Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.2.0)  MySQL Community Server - GPL.
+2023-12-02T07:45:42.433192Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2023-12-02 07:45:42+00:00 [Note] [Entrypoint]: Temporary server stopped
+
+2023-12-02 07:45:42+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+
+2023-12-02T07:45:42.548480Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2023-12-02T07:45:42.816278Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2023-12-02T07:45:42.817958Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.2.0) starting as process 1
+2023-12-02T07:45:42.825003Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2023-12-02T07:45:45.007763Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2023-12-02T07:45:46.689637Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2023-12-02T07:45:46.689695Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2023-12-02T07:45:46.903401Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2023-12-02T07:45:46.929910Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2023-12-02T07:45:46.930012Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.2.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+===========================================================================================
+2nd cmd
+Microsoft Windows [Version 10.0.19045.3693]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Manish\Pictures\mysql>docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS                 NAMES
+05bb311b33fa   sql       "docker-entrypoint.s…"   About an hour ago   Up About an hour   3306/tcp, 33060/tcp   intelligent_cerf
+
+C:\Users\Manish\Pictures\mysql>docker exec -it 05bb311b33fa  /bin/bash
+bash-4.4#
+Microsoft Windows [Version 10.0.19045.3693]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Manish\Pictures\mysql>docker exec -it 05bb311b33fa /bin/bash
+bash-4.4# ls
+bin   dev                         etc   lib    media  opt   root  sbin  sys  usr
+boot  docker-entrypoint-initdb.d  home  lib64  mnt    proc  run   srv   tmp  var
+bash-4.4# cd docker-entrypoint-initdb.d/
+bash-4.4# ls
+databse_students.sql
+bash-4.4# mysql root -p -h 127.0.0.1
+Enter password:
+ERROR 1049 (42000): Unknown database 'root'
+bash-4.4# mysql -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.2.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| student            |
+| sys                |
++--------------------+
+5 rows in set (0.08 sec)
+
+mysql> use student;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> use student
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_student |
++-------------------+
+| students          |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from students;
++-----------+-----------+----------+
+| StudentID | FirstName | Surname  |
++-----------+-----------+----------+
+|         1 | John      | Andersen |
+|         2 | Emma      | Smith    |
++-----------+-----------+----------+
+2 rows in set (0.01 sec)
+
+mysql> insert into students(FirstName,SurName)values("Murari","Jha");
+Query OK, 1 row affected (0.13 sec)
+
+mysql> select * from students;
++-----------+-----------+----------+
+| StudentID | FirstName | Surname  |
++-----------+-----------+----------+
+|         1 | John      | Andersen |
+|         2 | Emma      | Smith    |
+|         3 | Murari    | Jha      |
++-----------+-----------+----------+
+3 rows in set (0.00 sec)
+
+mysql>
+
+
+
